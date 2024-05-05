@@ -1,0 +1,26 @@
+@mixin font-family-ubuntu(){
+  font-family: CustomUbuntu, sans-serif;
+}
+@mixin font-family-monsterrat(){
+  font-family: CustomMonsterrat, sans-serif;
+}
+  
+  
+  body {
+    @include font-family-ubuntu;
+  }
+  
+  .flower-list-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 69px;
+  }
+
+  .flower-name{
+    font-size: 20px;
+    font-family: 'ubuntu';
+    line-height: 15px;
+    text-align: center;
+    color: #fff;
+  }
+
