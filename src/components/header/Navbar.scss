@@ -1,0 +1,113 @@
+@import "../../assets/scss/style.scss";
+
+header {
+    height: 80px;
+    display: flex;
+    .navbar {
+        width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 40px;
+      @media (max-width: 768px){
+        padding: 0 10px;
+      }
+      .logo {
+        margin-left: 23px;
+      }
+  
+      .nav {
+        display: flex;
+        gap: 55px;
+        list-style-type: none;
+        align-items: center;
+
+        @media (max-width: 998px){
+            gap: 30px;
+        }
+        .nav-item {
+          cursor: pointer;
+          @include font-family-monsterrat;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 14px;
+          color: #949EA0;
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          a{
+            text-decoration: none;
+            color: #949EA0;
+          }
+        }
+  
+        .new-account-item {
+          width: 140px;
+          height: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 25px;
+          background: linear-gradient(270deg, #ECBCB3 0%, #EAA79E 100%);
+          box-shadow: 0px 15px 20px 0px rgba(234, 168, 159, 0.2);
+          color: #fff; /* Adjusted text color for better contrast */
+          @include font-family-monsterrat;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 14px;
+          text-align: center;
+        }
+      }
+  
+      .menu-toggle {
+        display: none;
+        cursor: pointer;
+        padding: 10px;
+  
+        .bar {
+          width: 25px;
+          height: 3px;
+          background-color: #949EA0;
+          margin: 4px 0;
+          transition: 0.4s;
+        }
+      }
+  
+      /* Media query for responsive design */
+      @media (max-width: 768px) {
+        .menu-toggle {
+          display: block;
+        }
+  
+        .nav {
+          display: none;
+          position: absolute;
+          top: 80px;
+          left: 0;
+          width: 100%;
+          height: calc(100% - 80px);
+          background-color: #fff;
+          padding: 0;
+          margin-top: 0;
+          .mobile-nav{
+            display: flex;
+            flex-direction: column;
+            gap: 52px;
+            width: 100%;
+            background-color: #fff;
+            padding: 40px;
+            align-items: flex-start;
+          }
+  
+        }
+  
+        /* Show mobile menu when mobile-open class is applied */
+        &.mobile-open {
+          .nav {
+            display: flex; /* Show the mobile menu */
+          }
+        }
+      }
+    }
+  }
+  

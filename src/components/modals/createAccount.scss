@@ -1,0 +1,162 @@
+/* createAccount.scss */
+
+@import "../../assets/scss/style.scss";
+
+.create-account-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(0, 0, 0, 0.5);  */
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.8) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .create-account-modal {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 15px 30px 0px #0000000D;
+    width: 400px;
+    max-width: 90%;
+    text-align: center;
+    position: relative;
+    .succesfull-message{
+      @include font-family-ubuntu;
+      font-size: 25px;
+      font-weight: 300;
+      line-height: 25px;
+      text-align: center;
+
+    }
+    .close-login-btns{
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      align-items: center;
+      .ok-btn{
+        padding: 15px;
+        cursor: pointer;
+        background: linear-gradient(270deg, #ECBCB3 0%, #EAA79E 100%);
+        box-shadow: 0px 15px 20px 0px #EAA89F33;
+        cursor: pointer;
+        border: none;
+        @include font-family-ubuntu;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 14px;
+        text-align: center;
+        color: #fff;
+      }
+    }
+
+  }
+  
+  .close-button {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    background: none;
+    border: none;
+    @include font-family-ubuntu;
+    font-size: 13px;
+    line-height: 13px;
+    text-align: center;
+    color: #fff;
+    opacity: 50%;
+    
+  }
+  .popup-title{
+    @include font-family-ubuntu;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: center;
+  }
+  .acc-form-group{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .acc-form-control{
+    display: flex;
+    gap: 10px;
+    width: 440px;
+    max-width: 100% !important;
+    background: #F5F6F7;
+
+}
+.acc-form-control-except{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+.acc-form-control-except .acc-input-form{
+    display: flex;
+    flex-direction: column;
+    background: #F5F6F7;
+    width: 50%;
+    padding-right: 0;
+
+}
+  .acc-input-form{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: #F5F6F7;
+    padding: 15px 0 15px 15px;
+  }
+  .acc-input-form label {
+    text-align: left;
+    @include font-family-ubuntu;
+    font-size: 10px;
+    line-height: 10px;
+    text-align: left;
+    color: #949EA0;
+
+  }
+  .acc-input-form input {
+    outline: unset;
+    border: unset;
+    background: #F5F6F7;
+    color: #334144;
+    @include font-family-ubuntu;
+    font-size: 13px;
+    line-height: 13px;
+
+  }
+
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+}
+.submit-button{
+    width: 100%;
+    padding: 15px;
+    cursor: pointer;
+    background: linear-gradient(270deg, #ECBCB3 0%, #EAA79E 100%);
+    box-shadow: 0px 15px 20px 0px #EAA89F33;
+}
+.create-account-btn{
+    background: none;
+    cursor: pointer;
+    border: none;
+    @include font-family-ubuntu;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 14px;
+    text-align: center;
+    color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+    .acc-input-form input {
+        font-size: 10px;
+        line-height: 10px;
+    }
+  }
