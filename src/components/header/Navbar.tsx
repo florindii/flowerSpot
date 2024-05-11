@@ -112,8 +112,16 @@ function Navbar() {
   // Close mobile menu when screen size is >= 768px
   useEffect(() => {
     const handleResize = () => {
+      const body = document.body;
+      const search = document.getElementById('search');
       if (window.innerWidth >= 768) {
         setIsMobileMenuOpen(false);
+        body.style.overflow = '';
+  
+        // Reset styles that were modified
+        if (search) {
+          search.style.marginTop = ''; // Reset marginTop
+        }
       }
     };
 
