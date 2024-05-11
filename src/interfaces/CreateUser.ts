@@ -1,8 +1,8 @@
 export interface CreateUser {
-    CreateUser: {
-        firstName: string | null,
-        lastName: string | null,
-        birthday: string | null,
+    createUser: {
+        first_name: string | null,
+        last_name: string | null,
+        date_of_birth: string | null,
         email: string | null,
         password: number | string,
     }

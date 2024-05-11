@@ -1,9 +1,13 @@
 import {configureStore} from "@reduxjs/toolkit";
 import auth from './auth'
+import  profile  from "./profile";
+import loadingReducer from './loadingSlice';
 
 export const store = configureStore({
   reducer: {
     auth: auth,
+    profile : profile,
+    loadingReducer:loadingReducer
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware({
     serializableCheck: false
